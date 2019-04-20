@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Simple Database App</title>
+		<link rel="stylesheet" href="/static/css/bulma.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<nav class="navbar is-light" role="navigation" aria=label="main navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="/"><div id="navbarBase" class="navbar-menu">Simple Database App</div></a>
+			</div>
+			<div class="navbar-start">
+				<a class="navbar-item" href="/">Início</a>
+				<a class="navbar-item" href="/create">Criar</a>
+				<a class="navbar-item" href="/search">Buscar</a>
+			</div>
+			<div class="navbar-end">
+				<% if session.user then %>
+					<p class="navbar-item">Logado como <%= session.user.username:upper() %> desde <%= session.user.login_date %></p>
+					<a class="navbar-item" href="/logout">Logout</a>
+				<% else %>
+					<p class="navbar-item">Desconectado</p>
+					<a class="navbar-item" href="/">Login</a>
+				<% end %>
+			</div>
+		</nav>
+		<div class="columns">
+			<div class="column"></div>
+		</div>
+
+		<div class="columns">
+			<div class="column is-one-fifth"></div>
+
+			<div class="column">
+				<% content_for("inner") %>
+			</div>
+
+			<div class="column is-one-fifth"></div>
+		</div>
+
+		<footer class="footer is-light">
+			<div class="content has-text-centered">
+				<p>Sistema de Cadastramento de Produtos 0.1</p>
+			</div>
+		</footer>
+	</body>
+</html>

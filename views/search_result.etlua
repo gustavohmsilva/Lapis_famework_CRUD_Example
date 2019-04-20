@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<div align="center">
+	<table class="table">
+		<thead>
+			<tr>
+				<th><abbr title="ID">ID</abbr></th>
+				<th><abbr title="Produto">Produto</abbr></th>
+				<th><abbr title="Quantidade">Qtd</abbr></th>
+				<th><abbr title="Preço">Preço</abbr></th>
+				<th><abbr title="Localização">Local</abbr></th>
+				<th><abbr title="Delete">Del</abbr></th>
+				<th><abbr title="Editar">Edit</abbr></th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th><abbr title="ID">ID</abbr></th>
+				<th><abbr title="Produto">Produto</abbr></th>
+				<th><abbr title="Quantidade">Qtd</abbr></th>
+				<th><abbr title="Preço">Preço</abbr></th>
+				<th><abbr title="Localização">Local</abbr></th>
+				<th><abbr title="Delete">Del</abbr></th>
+				<th><abbr title="Editar">Edit</abbr></th>
+			</tr>
+		</tfoot>
+		<tbody>
+			<% for _, v in ipairs(resultado_busca) do %>
+				<tr>
+					<td><%= v.id %></td>
+					<td><%= v.produto %></td>
+					<td><%= v.quantidade %></td>
+					<td><%= v.preco %></td>
+					<td><%= v.localizacao %></td>
+					<td>
+						<a href="/delete/<%= v.id %>">
+							<img src="/static/images/icons/delete.png" alt="Deletar">
+						</a>
+					</td>
+					<td>
+						<a href="/edit/<%= v.id %>">
+							<img src="/static/images/icons/edit.png" alt="Edit">
+						</a>
+					</td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>

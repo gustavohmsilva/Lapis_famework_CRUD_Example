@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<div class="columns is-desktop">
+	<div class="column is-one-third"></div>
+	<div class="column is-one-third">
+	        <form action="/login" method="post">
+			<label class="label">Usuário</label>
+			<div class="field">
+				<div class="control">
+					<input class="input" type="text" name="username" placeholder="Usuário">
+				</div>
+			</div>
+
+			<label class="label">Senha</label>
+			<div class="field">
+				<div class="control">
+					<input class="input" type="password" name="password" placeholder="Senha">
+				</div>
+			</div>
+                        <div class="control">
+				<button class="button is-primary" type="submit" value="login">Entrar</button>
+			</div>
+		</form>
+	</div>
+	<div class="column is-one-third"></div>
+	
+        <% if falha_login then %>
+		<div class="column">
+			<article class="message">
+				<div class="message-header">
+					<p>AVISO:</p>
+				</div>
+				<div class="message-body">
+					<p>Usuário ou senha incorretos ou não encontrados...</p>
+				</div>
+			</article>
+		</div>
+	<% end %>
+</div>

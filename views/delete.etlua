@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<% if error then %>
+	<div class="columns">
+		<div class="column"></div>
+		<div class="column is-three-fifths has-text-white">
+			<article class="tile is-child notification is-danger text-center is-size-3 has-text-centered"><%= error_msg %></article>
+		</div>
+		<div class="column"></div>
+	</div>
+<% end %>
+<div align="center">
+	<div class="column">
+		<form action="/search">
+			<input class="button is-primary" type="submit" value="Nova Pesquisa...">
+		</form>
+	</div>
+</div>

@@ -1,0 +1,47 @@
+<% if error then %>
+	<div class="columns">
+		<div class="column"></div>
+		<div class="column is-three-fifths has-text-white">
+		<article class="tile is-child notification is-danger text-center is-size-3 has-text-centered"><%= error_msg %></article>
+
+		</div>
+		<div class="column"></div>
+	</div>
+<% end %>
+
+<form action="/search_result" method="get">
+	<div class="columns">
+		<div class="column is-three-fifths">
+			<div class="field">
+				<label class="label">Dado para Busca:</label>
+				<div class="control">
+					<input class="input" type="text" name="value" type="text">
+				</div>
+				<p class="help">Digite o dado para buscar...</p>
+			</div>
+		</div>
+
+		<div class="column">
+			<div class="field">
+				<label class="label">Buscar por:</label>
+				<div class="control">
+					<div class="select">
+						<select name="type">
+							<option value="id">ID</option>
+							<option value="produto">Produto</option>
+							<option value="quantidade">Quantidade</option>
+							<option value="localizacao">Localização</option>
+							<option value="preco">Preço</option>
+						</select>
+					</div>
+					<p class="help">Selecione campo...</p>
+				</div>
+			</div>
+		</div>
+		<div class="column">
+			<label class="label">Vá!</label>
+			<input class="button is-primary" type="submit" value="Pesquisar">
+			<p class="help">Efetuar busca...</p>
+		</div>
+	</div>
+</form>

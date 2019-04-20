@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<div class="columns is-desktop">
+	<div class="column">
+	<% if modo_edicao then %>
+		<form action="/created/<%= params.id_to_edit %>" method="get">
+	<% else %>
+		<form action="/created" method="get">
+	<% end %>
+			<label class="label">Produto</label>
+			<div class="field">
+				<div class="control">
+					<input class="input" type="text" text="<%= produto %>" value="<%= produto %>" name="produto">
+				</div>
+			</div>
+
+			<label class="label">Quantidade</label>
+			<div class="field">
+				<div class="control">
+					<input class="input" type="text" text="<%= quantidade %>" value="<%= quantidade %>" name='quantidade'>
+				</div>
+			</div>
+
+			<label class="label">Local</label>
+			<div class="field">
+
+				<div class="control">
+					<input class="input" type="text" text="<%= localizacao %>" value="<%= localizacao %>" name="localizacao">
+				</div>
+			</div>
+
+			<label class="label">Preço</label>
+			<div class="field has-addons">
+
+				<p class="control">
+					<a class="button is-static">R$</a>
+				</p>
+				<p class="control">
+					<input class="input" type="text" text="<%= preco %>" value="<%= preco %>" name="preco">
+				</p>
+			</div>
+
+			<div class="control">
+				<button class="button is-primary" type="submit" value="Pesquisar"><%= texto_botao %></button>
+			</div>
+		</form>
+	</div>
+	<% if modo_edicao then %>
+		<div class="column">
+			<article class="message">
+				<div class="message-header">
+					<p>AVISO:</p>
+				</div>
+				<div class="message-body">
+					<%= texto_modo_edicao %>
+				</div>
+			</article>
+		</div>
+	<% end %>
+</div>
