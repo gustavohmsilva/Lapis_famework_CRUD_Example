@@ -24,4 +24,4 @@ The companion to the Youtube Course called "Desenvolvendo Sites em Lua". This is
 [Episode 18](https://www.youtube.com/watch?v=B9wwEyZSjy8)     
 [Episode 19](https://www.youtube.com/watch?v=cE4-HjVFeG0)     
 [Episode 20](https://www.youtube.com/watch?v=me0KxY6krNk)     
-[Episode 21]()     
+[Episode 21](https://youtu.be/y_QcDuOZRF0)     
